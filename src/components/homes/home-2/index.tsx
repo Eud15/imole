@@ -7,6 +7,8 @@ import Link from "next/link";
 import ServiceModal from "@/modals/ServiceModal";
 import { Swiper, SwiperSlide } from "swiper/react";
 import Footer from "@/layouts/footers/Footer";
+import VideoModa from "./popup-video";
+import VideoLinkModa from "./popup-link";
 
 function displaySelectedImage(event, elementId) {
     const selectedImage = document.getElementById(elementId);
@@ -24,6 +26,8 @@ function displaySelectedImage(event, elementId) {
 }
 const Products = () => {
 	const [showModal, setShowModal] = useState(false);
+	const [videomodal, setShowvideomodal] = useState(false);
+	const [videomodalLink, setShowvideomodalLink] = useState(false);
 
 	if(typeof window !== "undefined") {
 		require("bootstrap/dist/js/bootstrap");
@@ -34,7 +38,7 @@ const Products = () => {
 		<>
 			<main className="home">
 				<HeaderOne />
-				<InfoArea />
+				
 
 				<section className="search py-12">
 					<form onSubmit={(e) => e.preventDefault()}>
@@ -67,12 +71,27 @@ const Products = () => {
 
 				<section className="visited py-12">
 					<div className="title d-flex align-items-center justify-content-between">
-						<h2 className="shrink-0">Derniere vidéo</h2>
+						<h2 className="shrink-0">Nouvelle vidéo</h2>
 						<div className="custom-pagination visited-pagination"></div>
 					</div>
 
+					<div className="card text-center">
 
-					<Swiper
+								<div  className="card-body py-4">
+								
+									<span className=" text-bg-primary p-3 rounded-5">
+									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-upload"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" x2="12" y1="3" y2="15"/></svg>
+									</span>
+								</div>
+								<div className="card-footer d-flex gap-2">
+								<span onClick={()=>setShowvideomodalLink(!videomodalLink)} className="btn btn-sm btn-dark w-50">Url</span>
+								<span onClick={()=>setShowvideomodal(!videomodal)} className="btn btn-sm btn-secondary w-50">Fichier</span>
+
+								</div>
+								</div>
+								<VideoLinkModa show={videomodalLink} setshow={setShowvideomodalLink} />
+								<VideoModa show={videomodal} setshow={setShowvideomodal} />
+{					/*<Swiper
 						
 						className="swiper visited-swiper"
 					>
@@ -82,23 +101,23 @@ const Products = () => {
 									
 							<div className="card text-center">
 
-  <div className="card-body">
-   
-    <a href="#" className=" text-bg-primary p-3 rounded-5">
-	<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-upload"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" x2="12" y1="3" y2="15"/></svg>
-	</a>
-  </div>
-  <div className="card-footer text-muted">
-    Ajouter une vidéo
-  </div>
-</div>
+								<div className="card-body">
+								
+									<a href="#" className=" text-bg-primary p-3 rounded-5">
+									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-upload"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" x2="12" y1="3" y2="15"/></svg>
+									</a>
+								</div>
+								<div className="card-footer text-muted">
+									Ajouter une vidéo
+								</div>
+								</div>
 								
 							</Link>
 						</SwiperSlide>
 
 					
 					
-					</Swiper>
+	</Swiper>*/}
 				</section>
 
 				

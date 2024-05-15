@@ -75,13 +75,21 @@ const HeaderOne = () => {
 		<>
 			<section className="wrapper dz-mode">
 				<div className="menu">
-					<button onClick={toggleShow} className="toggle-btn">
+					{/* <button onClick={toggleShow} className="toggle-btn">
 						<img
 							src="assets/svg/menu/burger-white.svg"
 							alt=""
 							className="icon"
 						/>
-					</button>
+					</button> */}
+					<h2 className="text-white"
+					
+				>DOKUN </h2>
+					{/* <Link href="/user-profile">
+							<img src="assets/svg/menu/profile-white.svg" alt="icon" />
+						</Link> */}
+
+
 
 					<div className="btn-grp d-flex align-items-center gap-16">
 						<label
@@ -100,9 +108,7 @@ const HeaderOne = () => {
 								className="moon"
 							/>
 						</label>
-						<Link href="/user-profile">
-							<img src="assets/svg/menu/profile-white.svg" alt="icon" />
-						</Link>
+						
 					</div>
 				</div>
 				<div

@@ -61,7 +61,8 @@ const UserProfile = () => {
 	return (
 		<>
 			<main className="user-profile">
-				<section className="user-profile-heading d-flex align-items-center justify-content-between">
+			<div>Bientôt disponible</div>
+				{/* <section className="user-profile-heading d-flex align-items-center justify-content-between">
 					<div className="d-flex align-items-center gap-12">
 						<div className="image rounded-full overflow-hidden shrink-0">
 							<img
@@ -267,12 +268,12 @@ const UserProfile = () => {
 					>
 						Log Out
 					</button>
-				</div>
+				</div> */}
 			</main>
 
 			<Footer />
 
-			<LogOutModal handleLogout={handleLogout} showModal={showModal} />
+			{/* <LogOutModal handleLogout={handleLogout} showModal={showModal} /> */}
 		</>
 	);
 };

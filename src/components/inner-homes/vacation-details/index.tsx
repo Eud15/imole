@@ -13,82 +13,43 @@ const VacationDetails = () => {
 
 	return (
 		<>
-			<main className="details vacation-details">
-				<section className="banner position-relative">
-					<img
-						src="/assets/images/details/banner-1.png"
-						alt="Banner"
-						className="w-full img-fluid"
-					/>
+		<main className= "details vacation-details" >
+		<section className="banner position-relative" >
+			<img src="/assets/images/details/banner-1.png" alt = "Banner" style={{height: "90px"}} className = "w-100  img-fluid" />
 
-<section className="py-5">
-  <div className="container">
-    <div className="row">
-      <div className="col-md-8 offset-md-2">
-        <div className="card mb-3">
-          <img src="https://i3.ytimg.com/vi/jJPMnTXl63E/hqdefault.jpg" alt="YouTube video thumbnail" className="card-img-top" />
-          <div className="card-body">
-            <h5 className="card-title">
-              Powfu - death bed &lpar;coffee for your head&rpar;
-              &lpar;Official Video&rpar; ft. beabadoobee
-            </h5>
-          
-            <p className="card-text">
-            
-            </p>
-            <form id="form-player" onsubmit="return false;">
-              <div className="form-group mb-0">
-                <div className="input-group">
-                  <div className="input-group-prepend">
-                    <button className="btn btn-primary" type="button">
-                      <span className="fas fa-play"></span></button>
-                    <div className="input-group-text bg-transparent">
-                      <small>00:11 / 02:54</small>
-                    </div>
-                   
-                  </div>
-                
-                  <div className="input-group-append flex-fill">
-                    <div className="input-group-text flex-fill bg-transparent border-left-0">
-                      <input type="range" className="custom-range" min="0" max="100" value="0" />
-                    </div>
-                    <button className="btn btn-secondary" type="button" data-toggle="tooltip" data-placement="right" title="Loop">
-                      <span className="fas fa-sync-alt"></span></button>
-                  </div>
-                  
-                </div>
-               
-              </div>
-            
-            </form>
-          
-          </div>
-      
-        </div>
-      
-      </div>
-    
-    </div>
-   
-  </div>
+			<div className="page-title" >
+				<button onClick={ handleBack }
+					type = "button"
+					className = "back-btn back-page-btn d-flex align-items-center justify-content-center rounded-full">
+					<img src="/assets/svg/arrow-left-black.svg" alt = "arrow" />
+				</button>
+				<h3 className="main-title"> Vidéo </h3>
+			</div>
+		</section>
 
-</section>
+
+
+				<section className = " details-footer  d-flex flex-column align-items-center justify-content-between w-100">
+					<VideoBox/>
+					<div className="d-flex w-100 justify-content-center mt-3">
+					 Exporter 
+					</div>
 				</section>
-
-				
-
-				<section className="details-footer d-flex align-items-center justify-content-between gap-12 w-100">
-					<p>
-						Fon <span></span>
-					</p>
-					<Link href="/checkout-vacation">Doubler</Link>
-				</section>
-				
-			</main>
-			<Footer />
-			
-		</>
+				</main>
+				< Footer />
+</>
 	);
 };
 
 export default VacationDetails;
+
+
+export function VideoBox() {
+	return (
+		<video className= "w-100" height ='300' autoPlay = { true} controls  preload = "true" >
+			<source src="/eda.mp4" type = "video/mp4" />
+				<track src="/path/to/captions.vtt" kind = "subtitles" srcLang = "en"label = "English"/>
+				Your browser does not support the video tag.
+      	</video>
+    )
+}

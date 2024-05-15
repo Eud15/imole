@@ -19,7 +19,8 @@ const UserInfo = () => {
 	return (
 		<>
 			<main>
-				<div className="page-title">
+				<div>Bientôt disponible</div>
+				{/* <div className="page-title">
 					<button
 						type="button"
 						onClick={handleBack}
@@ -117,7 +118,7 @@ const UserInfo = () => {
 					<Link href="/user-profile" className="btn-primary">
 						Save Changes
 					</Link>
-				</div>
+				</div> */}
 			</main>
 
 			<BirthModal

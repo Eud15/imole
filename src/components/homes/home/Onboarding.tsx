@@ -33,7 +33,7 @@ const Onboarding = () => {
 								<Image
 									src={item.image}
 									alt="Slide"
-									className="w-100 h-100 object-fit-cover mt-32"
+									className="w-100 h-1/2 object-fit-cover mt-32"
 								/>
 							</div>
 							<div className="content text-center ">
