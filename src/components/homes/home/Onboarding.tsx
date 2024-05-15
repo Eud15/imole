@@ -19,27 +19,7 @@ const onboarding_data = [
 		description:
 			"Communiquez beaucoup plus facilement et n'importe où avec Totché gbé. Suivez vos vidéos dans toutes les langues",
 	},
-	{
-		id: 2,
-		image: onboarding_img_2,
-		title: "Best travel destinations in the world",
-		description:
-			"Semper in cursus magna et eu varius nunc adipiscing. Elementum justo, laoreet id semiru forigive you.",
-	},
-	{
-		id: 3,
-		image: onboarding_img_3,
-		title: "Best travel destinations in the world",
-		description:
-			"Semper in cursus magna et eu varius nunc adipiscing. Elementum justo, laoreet id semiru forigive you.",
-	},
-	{
-		id: 4,
-		image: onboarding_img_4,
-		title: "Best travel destinations in the world",
-		description:
-			"Semper in cursus magna et eu varius nunc adipiscing. Elementum justo, laoreet id semiru forigive you.",
-	},
+	
 ];
 
 const Onboarding = () => {
@@ -49,30 +29,26 @@ const Onboarding = () => {
 				<Swiper className="swiper onboarding-swiper">
 					{onboarding_data.map((item, i) => (
 						<SwiperSlide key={i} className="swiper-slide">
-							<div className="image position-relative">
+							<div className="image position-relative mt-12">
 								<Image
 									src={item.image}
 									alt="Slide"
-									className="w-100 h-100 object-fit-cover"
+									className="w-100 h-100 object-fit-cover mt-64"
 								/>
 							</div>
-							<div className="content text-center">
-								<h2>{item.title}</h2>
-								<p>{item.description}</p>
-								{i === 3 ? (
+							<div className="content text-center ">
+								<h1>{item.title}</h1>
+								
 									<>
 										<Link
-											href="/signin"
+											href="/home"
 											className="btn-primary btn-get-started"
 										>
-											Get Started
+											Commencer
 										</Link>
-										<h6>
-											Do not have an account?{" "}
-											<Link href="/signup">Register</Link>
-										</h6>
+										
 									</>
-								) : null}
+								
 							</div>
 						</SwiperSlide>
 					))}
