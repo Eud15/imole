@@ -20,7 +20,7 @@ const SplashScreen = () => {
         <div className="circle text-center">
           <div>
             <h1>Totché Gbé</h1>
-            <p>Communiquez plus facilement dans n'importe quelle langue.</p>
+            <p>Communiquez plus facilement dans nimporte quelle langue.</p>
           </div>
         </div>
         <div className="loader-spinner">
