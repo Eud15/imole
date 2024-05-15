@@ -6,7 +6,22 @@ import HeaderOne from "@/layouts/headers/HeaderOne";
 import Link from "next/link";
 import ServiceModal from "@/modals/ServiceModal";
 import { Swiper, SwiperSlide } from "swiper/react";
+import Footer from "@/layouts/footers/Footer";
 
+function displaySelectedImage(event, elementId) {
+    const selectedImage = document.getElementById(elementId);
+    const fileInput = event.target;
+
+    if (fileInput.files && fileInput.files[0]) {
+        const reader = new FileReader();
+
+        reader.onload = function(e) {
+            selectedImage.src = e.target.result;
+        };
+
+        reader.readAsDataURL(fileInput.files[0]);
+    }
+}
 const Products = () => {
 	const [showModal, setShowModal] = useState(false);
 
@@ -52,9 +67,10 @@ const Products = () => {
 
 				<section className="visited py-12">
 					<div className="title d-flex align-items-center justify-content-between">
-						<h2 className="shrink-0">Créer une vidéo</h2>
+						<h2 className="shrink-0">Derniere vidéo</h2>
 						<div className="custom-pagination visited-pagination"></div>
 					</div>
+
 
 					<Swiper
 						
@@ -62,15 +78,20 @@ const Products = () => {
 					>
 						<SwiperSlide className="swiper-slide place-card">
 							<Link href="/vacation-details">
-								<div className="image position-relative">
-									<img
-										src="/assets/images/home/item-1.png"
-										alt="desert"
-										className="img-fluid w-100 overflow-hidden radius-8"
-									/>
-									 <input className="form-control" type="file" id="formFileMultiple" multiple></input>
+								
 									
-								</div>
+							<div className="card text-center">
+
+  <div className="card-body">
+   
+    <a href="#" className=" text-bg-primary p-3 rounded-5">
+	<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-upload"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" x2="12" y1="3" y2="15"/></svg>
+	</a>
+  </div>
+  <div className="card-footer text-muted">
+    Ajouter une vidéo
+  </div>
+</div>
 								
 							</Link>
 						</SwiperSlide>
@@ -150,6 +171,7 @@ const Products = () => {
 						</li>
 					</ul>
 				</section>
+				<Footer />
 			</main>
 
 			<ServiceModal setShowModal={setShowModal} showModal={showModal} />

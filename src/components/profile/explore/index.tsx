@@ -4,6 +4,8 @@ import explore_data from "@/data/explore-data";
 import InputRange from "@/ui/InputRange";
 import Image from "next/image";
 import Link from "next/link";
+import ServiceModal from "@/modals/ServiceModal";
+import { Swiper, SwiperSlide } from "swiper/react";
 import React, { useState } from "react";
 
 // data
@@ -42,8 +44,10 @@ const Explore = () => {
 
 	return (
 		<>
+			
 			<main className="explore">
 				<section className="search py-12">
+				
 					<form onSubmit={(e) => e.preventDefault()}>
 						<div className="form-inner w-100 d-flex align-items-center gap-8 radius-24">
 							<img
@@ -68,6 +72,44 @@ const Explore = () => {
 							</div>
 						</div>
 					</form>
+				</section>
+
+				<section className="visited py-12">
+					<div className="title d-flex align-items-center justify-content-between">
+						<h2 className="shrink-0">Derniere vidéo</h2>
+						<div className="custom-pagination visited-pagination"></div>
+					</div>
+
+
+					<Swiper
+						
+						className="swiper visited-swiper"
+					>
+						<SwiperSlide className="swiper-slide place-card">
+							<Link href="/vacation-details">
+								<div className="image position-relative">
+									<img
+										src="/assets/images/home/item-1.png"
+										alt="desert"
+										className="img-fluid w-100 overflow-hidden radius-8"
+									/>
+
+									 <div className="d-flex justify-content-center mt-4">
+        <div data-mdb-ripple-init className="btn btn-primary btn-rounded">
+            <label className="form-label text-white m-1">Créer une vidéo</label>
+			<input className="form-control d-none " type="file" id="formFileMultiple" onChange="displaySelectedImage(event, 'selectedImage')"></input>
+          
+        </div>
+    </div>
+									
+								</div>
+								
+							</Link>
+						</SwiperSlide>
+
+					
+					
+					</Swiper>
 				</section>
 
 				<section className="all-place py-12">
