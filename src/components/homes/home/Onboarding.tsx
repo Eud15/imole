@@ -6,7 +6,7 @@ import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import arrow_circle from "@/assets/svg/arrow-circle.svg";
-import onboarding_img_1 from "@/assets/images/onboarding/slide-1.png";
+import onboarding_img_1 from "@/assets/images/onboarding/s1.png";
 import onboarding_img_2 from "@/assets/images/onboarding/slide-2.png";
 import onboarding_img_3 from "@/assets/images/onboarding/slide-3.png";
 import onboarding_img_4 from "@/assets/images/onboarding/welcome.png";
@@ -15,9 +15,9 @@ const onboarding_data = [
 	{
 		id: 1,
 		image: onboarding_img_1,
-		title: "Best travel destinations in the world",
+		title: "Totché gbé",
 		description:
-			"Semper in cursus magna et eu varius nunc adipiscing. Elementum justo, laoreet id semiru forigive you.",
+			"Communiquez beaucoup plus facilement et n'importe où avec Totché gbé. Suivez vos vidéos dans toutes les langues",
 	},
 	{
 		id: 2,
@@ -78,19 +78,7 @@ const Onboarding = () => {
 					))}
 				</Swiper>
 
-				<div className="slider-footer">
-					<div className="row align-items-center">
-						<div className="col-6">
-							<button type="button" className="skip-btn">
-								<Image src={arrow_circle} alt="Arrow" />
-								Skip
-							</button>
-						</div>
-						<div className="col-6">
-							<div className="custom-pagination swiper-pagination"></div>
-						</div>
-					</div>
-				</div>
+				
 			</section>
 		</>
 	);

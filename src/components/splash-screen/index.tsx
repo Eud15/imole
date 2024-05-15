@@ -19,8 +19,8 @@ const SplashScreen = () => {
       <section className="spalsh-screen">
         <div className="circle text-center">
           <div>
-            <h1>Travgo</h1>
-            <p>Discover Your Destinition</p>
+            <h1>Totché Gbé</h1>
+            <p>Communiquez plus facilement dans n'importe quelle langue.</p>
           </div>
         </div>
         <div className="loader-spinner">
