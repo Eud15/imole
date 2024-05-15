@@ -6,7 +6,7 @@ import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import arrow_circle from "@/assets/svg/arrow-circle.svg";
-import onboarding_img_1 from "@/assets/images/onboarding/s1.png";
+import onboarding_img_1 from "@/assets/images/onboarding/c1.png";
 import onboarding_img_2 from "@/assets/images/onboarding/slide-2.png";
 import onboarding_img_3 from "@/assets/images/onboarding/slide-3.png";
 import onboarding_img_4 from "@/assets/images/onboarding/welcome.png";
@@ -26,14 +26,14 @@ const Onboarding = () => {
 	return (
 		<>
 			<section className="onboarding">
-				<Swiper className="swiper onboarding-swiper">
+				<Swiper className=" onboarding-swiper">
 					{onboarding_data.map((item, i) => (
 						<SwiperSlide key={i} className="swiper-slide">
 							<div className="image position-relative mt-12">
 								<Image
 									src={item.image}
 									alt="Slide"
-									className="w-100 h-100 object-fit-cover mt-64"
+									className="w-100 h-100 object-fit-cover mt-32"
 								/>
 							</div>
 							<div className="content text-center ">
