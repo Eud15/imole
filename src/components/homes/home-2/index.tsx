@@ -1,5 +1,6 @@
-"use client";
 // @ts-ignore 
+"use client";
+
 import React, { useState } from "react";
 import InfoArea from "./InfoArea";
 import HeaderOne from "@/layouts/headers/HeaderOne";
