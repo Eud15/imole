@@ -11,7 +11,7 @@ import Footer from "@/layouts/footers/Footer";
 import VideoModa from "./popup-video";
 import VideoLinkModa from "./popup-link";
 
-function displaySelectedImage(event, elementId) {
+function displaySelectedImage(event: any, elementId: any) {
     const selectedImage = document.getElementById(elementId);
     const fileInput = event.target;
 
